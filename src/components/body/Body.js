@@ -19,8 +19,8 @@ export class Body extends Component {
     render() {
     return (
         <div>
-            <div className="move-size">MOVE SIZE</div>  
             <ProgressBar variant="info" now={30} />      
+            <div className="move-size">MOVE SIZE</div>  
             {this.state.shop.map((item, key) =>
                 <MoveSize item={item} key={item.id} />
             )}
