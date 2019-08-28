@@ -1,0 +1,11 @@
+.price-cal{
+    float: right;
+    text-align: end;
+    margin-top: -2em;
+    margin-right: 1em;
+    
+}
+
+.dollor-amount, .add-hour{
+    font-style: italic;
+}
