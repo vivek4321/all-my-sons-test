@@ -12,3 +12,7 @@
   .customize{
     margin-top: -2em;
   }
+
+  .side-green-border{
+    border-left: 5px solid greenyellow;
+  }

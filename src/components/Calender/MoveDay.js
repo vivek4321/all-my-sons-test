@@ -11,11 +11,6 @@ export class MoveDay extends Component {
 
   render() {
     let date = new Date(this.props.showDate);
-    // let previousDayStyle = "";
-    // if(date>new Date()){
-    //     previousDayStye = "background-color-orange";
-    // }
-
     const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
     const weekDays = ["S", "M", "T", "W", "T", "F", "S"];
 
@@ -26,7 +21,7 @@ export class MoveDay extends Component {
         <div className="item-day">{weekDays[date.getDay()]}</div> 
         <div className="item-date">{date.getDate()}</div>
         <div className="item-month">{monthNames[date.getMonth()].toString().toUpperCase()}</div>
-        <div className={ (date < new Date() ? 'display-none' : 'best-prize')}>Best Prize</div>
+        <div className={ (date < new Date() ? 'display-none' : 'best-prize')}>Best Price</div>
       </div>
     );
   }

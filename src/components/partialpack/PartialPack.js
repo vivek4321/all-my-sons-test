@@ -11,7 +11,7 @@ export class PartialPacking extends Component {
   render() {
     return (
         <div>
-        <div className="list-item-pack">
+        <div className="list-item-pack side-green-border">
           <h2>PARTIAL PACK</h2>
           <Chevron className="arrow-icon-pack"></Chevron>
           <PriceCal bestPrice="Y" price="1223"></PriceCal>

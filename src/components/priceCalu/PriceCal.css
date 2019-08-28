@@ -9,3 +9,7 @@
 .dollor-amount, .add-hour{
     font-style: italic;
 }
+
+.best-value{
+    color: green;
+}
