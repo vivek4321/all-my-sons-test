@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import {withRouter} from 'react-router-dom';
+import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 import MoveDay from './MoveDay';
 
 
@@ -9,12 +9,11 @@ export class Calender extends Component {
         super(props);
         this.state = {
             some: '',
-            datesList : [
+            datesList: [
                 currDate
             ]
         };
-      }
-
+    }
 
     componentDidMount() {
         this.addNextFiveDays();
@@ -22,25 +21,25 @@ export class Calender extends Component {
     }
 
     addNextDay() {
-        this.setState( (prevState, props) => ({
-            datesList: [...prevState.datesList, new Date().setDate(new Date(prevState.datesList[prevState.datesList.length-1]).getDate()+1)]
+        this.setState((prevState, props) => ({
+            datesList: [...prevState.datesList, new Date().setDate(new Date(prevState.datesList[prevState.datesList.length - 1]).getDate() + 1)]
         }));
     }
 
-    addPreviousDay(){
-        this.setState( (prevState, props) => ({
-            datesList: [new Date().setDate(new Date(prevState.datesList[0]).getDate()-1), ...prevState.datesList]
+    addPreviousDay() {
+        this.setState((prevState, props) => ({
+            datesList: [new Date().setDate(new Date(prevState.datesList[0]).getDate() - 1), ...prevState.datesList]
         }));
     }
 
-    addNextFiveDays(){
+    addNextFiveDays() {
         this.addNextDay();
-        this.addNextDay();        
-        this.addNextDay();               
         this.addNextDay();
-        
+        this.addNextDay();
+        this.addNextDay();
+
     }
-    addPreviousFiveDays(){
+    addPreviousFiveDays() {
         this.addPreviousDay();
         this.addPreviousDay();
         this.addPreviousDay();
@@ -48,15 +47,16 @@ export class Calender extends Component {
         this.addPreviousDay();
         this.addPreviousDay();
     }
-  render() {
-    return (
-      <div className="container">
-          {this.state.datesList.map((item, key) =>                
-                <MoveDay showDate={item} key={key} />
-            )}
-      </div>
-    );
-  }
+
+    render() {
+        return (
+            <div className="container">
+                {this.state.datesList.map((item, key) =>
+                    <MoveDay showDate={item} key={key} />
+                )}
+            </div>
+        );
+    }
 }
 
 export default withRouter(Calender);

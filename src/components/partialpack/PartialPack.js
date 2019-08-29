@@ -1,20 +1,35 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import logoBrand from '../../assets/img/logo-brand.png';
-import {withRouter, Link} from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 import { IoIosArrowForward, IoIosCheckmarkCircleOutline } from "react-icons/io";
-import { ReactComponent as Chevron} from '../../assets/icons/chevron-right.svg';
+import { ReactComponent as Chevron } from '../../assets/icons/chevron-right.svg';
 import PriceCal from './../priceCalu/PriceCal'
 import './PartialPack.css';
+import { PriceAction } from './../../stores/pricestore/priceAction';
+import { connect } from 'react-redux';
 
+const mapStateToProps = state => ({
+  ...state
+})
+const mapDispatchToProps = dispatch => ({
+  PriceAction: (data) => dispatch(PriceAction(data))
+})
 
 export class PartialPacking extends Component {
+  checkUndefined(priceValue){
+    if(priceValue=== undefined){
+      return 0
+    } else {
+      return priceValue
+    }
+  }
   render() {
     return (
-        <div>
+      <div>
         <div className="list-item-pack side-green-border">
           <h2>PARTIAL PACK</h2>
           <Chevron className="arrow-icon-pack"></Chevron>
-          <PriceCal bestPrice="Y" price="1223"></PriceCal>
+          <PriceCal bestPrice="Y" price={ this.checkUndefined(this.props.PriceReducer.result.partialPrice)}></PriceCal>
           <div>4 Movers</div>
           <div>3 Hours</div>
           <hr></hr>
@@ -25,7 +40,7 @@ export class PartialPacking extends Component {
         <div className="list-item-pack">
           <h2>FULL PACK</h2>
           <Chevron className="arrow-icon-pack"></Chevron>
-          <PriceCal bestPrice="N" price="2123"></PriceCal>
+          <PriceCal bestPrice="N" price={this.props.PriceReducer.result.fullPrice}></PriceCal>
           <div>6 Movers</div>
           <div>4 Hours</div>
           <hr></hr>
@@ -36,7 +51,7 @@ export class PartialPacking extends Component {
         <div className="list-item-pack">
           <h2>I'LL PACK MYSELF</h2>
           <Chevron className="arrow-icon-pack"></Chevron>
-          <PriceCal bestPrice="N" price="1234"></PriceCal>
+          <PriceCal bestPrice="N" price={this.props.PriceReducer.result.myPrice}></PriceCal>
           <div>2 Movers</div>
           <div>2 Hours</div>
         </div>
@@ -44,10 +59,9 @@ export class PartialPacking extends Component {
           <h2>CUSTOMIZE</h2>
           <Chevron className="arrow-icon-pack customize"></Chevron>
         </div>
-     
-        </div>
+      </div>
     );
   }
 }
 
-export default withRouter(PartialPacking);
+export default connect(mapStateToProps, mapDispatchToProps)(withRouter(PartialPacking));
