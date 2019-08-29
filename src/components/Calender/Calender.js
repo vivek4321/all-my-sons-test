@@ -10,7 +10,16 @@ export class Calender extends Component {
         this.state = {
             some: '',
             datesList: [
-                currDate
+                currDate,
+                new Date().setDate(currDate.getDate()+1),
+                new Date().setDate(currDate.getDate()+2),
+                new Date().setDate(currDate.getDate()+3),
+                new Date().setDate(currDate.getDate()+4),
+                new Date().setDate(currDate.getDate()+5),
+                new Date().setDate(currDate.getDate()+6),
+                new Date().setDate(currDate.getDate()+7),
+                new Date().setDate(currDate.getDate()+8),
+                new Date().setDate(currDate.getDate()+9),
             ]
         };
     }
@@ -22,7 +31,7 @@ export class Calender extends Component {
 
     addNextDay() {
         this.setState((prevState, props) => ({
-            datesList: [...prevState.datesList, new Date().setDate(new Date(prevState.datesList[prevState.datesList.length - 1]).getDate() + 1)]
+            datesList: [...prevState.datesList, new Date().setDate(new Date(new Date(prevState.datesList[prevState.datesList.length - 1]).getDate() + 1))]
         }));
     }
 
@@ -33,10 +42,10 @@ export class Calender extends Component {
     }
 
     addNextFiveDays() {
-        this.addNextDay();
-        this.addNextDay();
-        this.addNextDay();
-        this.addNextDay();
+        // this.addNextDay();
+        // this.addNextDay();
+        // this.addNextDay();
+        // this.addNextDay();
 
     }
     addPreviousFiveDays() {
