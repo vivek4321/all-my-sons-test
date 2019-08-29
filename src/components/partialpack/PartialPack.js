@@ -16,8 +16,8 @@ const mapDispatchToProps = dispatch => ({
 })
 
 export class PartialPacking extends Component {
-  checkUndefined(priceValue){
-    if(priceValue=== undefined){
+  checkUndefined(priceValue) {
+    if (priceValue === undefined) {
       return 0
     } else {
       return priceValue
@@ -29,7 +29,7 @@ export class PartialPacking extends Component {
         <div className="list-item-pack side-green-border">
           <h2>PARTIAL PACK</h2>
           <Chevron className="arrow-icon-pack"></Chevron>
-          <PriceCal bestPrice="Y" price={ this.checkUndefined(this.props.PriceReducer.result.partialPrice)}></PriceCal>
+          <PriceCal bestPrice="Y" price={this.checkUndefined(this.props.PriceReducer.result.partialPrice)}></PriceCal>
           <div>4 Movers</div>
           <div>3 Hours</div>
           <hr></hr>
