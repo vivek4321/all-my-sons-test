@@ -5,16 +5,25 @@
 
 .fa-angle-left{
     float: left;
-    margin-top: 0.95em;
+    margin-top: 1.75em;
     margin-left: 0.75em;
+    max-width: 2rem;
 }
 
 .fa-phone-right{
     float: right;
     margin-top: 1.5em;
     margin-right: 1em;
+    max-width: 2rem;
 }
 
 .nav-bar{
     text-align: center;
+}
+
+.callus-text{
+    margin-right: -3.35em;
+    float: right;
+    margin-top: 4.75em;
+    font-size: 13px;
 }

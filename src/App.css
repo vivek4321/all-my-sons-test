@@ -36,3 +36,30 @@
 .display-none{
   display: none;
 }
+
+@media only screen and (max-width: 600px) {
+ h2{
+   font-size: 24px;
+ }
+ /* .list-item-pack {
+  padding:.5rem !important;
+ } */
+ .price-cal{
+  margin-right: 0.25em !important;
+ }
+ .add-hour{
+   font-size: 14px;
+ }
+ .font-14{
+  font-size: 14px; 
+  margin-left: 0.75em;  
+ }
+
+ .all-sons-logo {
+  max-width: 160px;
+}
+.progress {
+  height: 0.5rem;
+  width: 100%;
+}
+ }
