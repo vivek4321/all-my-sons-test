@@ -3,7 +3,6 @@ import './Body.css';
 import { withRouter } from 'react-router-dom';
 var images = require.context('../../assets/', true);
 
-
 export class MoveSize extends Component {
     constructor(props) {
         super(props);

@@ -61,7 +61,7 @@ export class Calender extends Component {
         return (
             <div className="container">
                 {this.state.datesList.map((item, key) =>
-                    <MoveDay showDate={item} key={key} />
+                    <MoveDay showDate={item} pkey={key} />
                 )}
             </div>
         );

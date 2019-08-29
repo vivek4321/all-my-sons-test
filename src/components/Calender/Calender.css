@@ -20,7 +20,7 @@
 }
 
 .background-color-grey{
-    background-color: grey;
+    background-color: #eeeeee;
 }
 .background-color-orange{
     background-color: #F5F5DC;    
@@ -80,4 +80,9 @@
   ::-webkit-scrollbar {
     width: 0px;  /* Remove scrollbar space */
     background: transparent;  /*  just make scrollbar invisible */
+}
+
+.todayDate{
+    background-color: white;
+    border-bottom: none !important;
 }

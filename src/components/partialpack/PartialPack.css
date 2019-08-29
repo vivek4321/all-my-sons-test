@@ -15,4 +15,5 @@
 
   .side-green-border{
     border-left: 5px solid greenyellow;
+    border-top: none !important;
   }
