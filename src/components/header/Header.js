@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import logoBrand from '../../assets/img/logo-brand.png';
 import './Header.css';
-import { FaAngleLeft } from 'react-icons/fa';
-import { FaPhone } from 'react-icons/fa';
+// import { FaAngleLeft } from 'react-icons/fa';
+// import { FaPhone } from 'react-icons/fa';
 import { withRouter, Link } from 'react-router-dom';
-import { IoIosArrowBack} from "react-icons/io";
+// import { IoIosArrowBack} from "react-icons/io";
 const images = require.context('../../assets/', true);
 
 export class Header extends Component {

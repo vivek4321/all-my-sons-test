@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { withRouter } from 'react-router-dom';
 import './Calender.css';
 import { PriceAction } from './../../stores/pricestore/priceAction';
 import { connect } from 'react-redux';
@@ -41,7 +40,7 @@ export class MoveDay extends Component {
     return (
       <div onClick={this.getPrice} className={'move-day-item ' 
       + (date < new Date() ? 'background-color-grey ' : 'background-color-orange ')
-      + ( this.props.pkey == this.props.PriceReducer.result.selected ? 'todayDate' : '')}>
+      + ( this.props.pkey === this.props.PriceReducer.result.selected ? 'todayDate' : '')}>
 
         <span className={(date < new Date() ? 'orange-dot' : 'green-dot')}></span>
         <div className="item-day">{weekDays[date.getDay()]}</div>

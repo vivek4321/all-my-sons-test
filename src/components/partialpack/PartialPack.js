@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import logoBrand from '../../assets/img/logo-brand.png';
-import { withRouter, Link } from 'react-router-dom';
-import { IoIosArrowForward, IoIosCheckmarkCircleOutline } from "react-icons/io";
+import { withRouter } from 'react-router-dom';
+import { IoIosCheckmarkCircleOutline } from "react-icons/io";
 import { ReactComponent as Chevron } from '../../assets/icons/chevron-right.svg';
 import PriceCal from './../priceCalu/PriceCal'
 import './PartialPack.css';
