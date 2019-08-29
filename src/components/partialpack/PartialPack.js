@@ -50,8 +50,6 @@ export class PartialPacking extends Component {
         </div>
         <div className="list-item-pack">
           <h2>I'LL PACK MYSELF</h2>
-
-          {JSON.stringify(this.props.PriceReducer.result)}
           <Chevron className="arrow-icon-pack"></Chevron>
           <PriceCal bestPrice="N" price={this.props.PriceReducer.result.myPrice}></PriceCal>
           <div>2 Movers</div>
