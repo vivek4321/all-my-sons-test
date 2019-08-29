@@ -41,9 +41,9 @@
  h2{
    font-size: 24px;
  }
- /* .list-item-pack {
-  padding:.5rem !important;
- } */
+ .list-item-pack {
+  padding:.75rem .1rem;
+ }
  .price-cal{
   margin-right: 0.25em !important;
  }
@@ -62,4 +62,14 @@
   height: 0.5rem;
   width: 100%;
 }
+.fa-angle-left {
+  max-width: 1.5rem !important;
  }
+ .fa-phone-right {
+  max-width: 1.5rem !important;
+ }
+ .callus-text {
+  margin-right: -3.25em !important;
+  font-size: 11px !important;
+ }
+}

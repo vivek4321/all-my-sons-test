@@ -19,7 +19,6 @@ export class MoveDay extends Component {
       date: new Date(this.props.showDate)
     }
     this.getPrice = this.getPrice.bind(this);
-    console.log(new Date(this.props.showDate).getDay());
   }
 
   getPrice = (event) => {
